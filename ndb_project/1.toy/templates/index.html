@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> ndb</title>
+</head>
+
+<body>
+    Hello: {{ name }}
+<hr />
+<form action="/processform" method="post">
+ <input name="title" placeholder="comment title"><br/>
+ <input type="submit"> <br/>
+</form>
+
+<div>
+    {% for item in q %}
+     <h2>  {{ item.title }} </h2>
+     <h6> {{ item.created_at }} </h6>
+     <hr/>
+    {% endfor %}
+</div>
+</body>
+</html>
